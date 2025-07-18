@@ -1,13 +1,31 @@
-// Loader animation
+// script.js
+
+// Hide preloader when page is loaded
 window.addEventListener("load", () => {
   const loader = document.getElementById("loader");
-  loader.style.display = "none";
+  loader.style.opacity = "0";
+  setTimeout(() => {
+    loader.style.display = "none";
+  }, 500);
 });
 
-// Form behavior
-document.getElementById("consultForm").addEventListener("submit", function (e) {
+// Smooth scroll behavior for nav links
+document.querySelectorAll("nav a").forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const targetId = this.getAttribute("href");
+    document.querySelector(targetId).scrollIntoView({
+      behavior: "smooth",
+    });
+  });
+});
+
+// Consultation form submission
+const form = document.getElementById("consultForm");
+const formMsg = document.getElementById("formMsg");
+
+form.addEventListener("submit", function (e) {
   e.preventDefault();
-  document.getElementById("formMsg").innerText =
-    "Thank you! We will contact you shortly.";
-  this.reset();
+  formMsg.textContent = "Thank you for reaching out! We’ll contact you soon.";
+  form.reset();
 });
