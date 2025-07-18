@@ -1,31 +1,33 @@
-// script.js
-
-// Hide preloader when page is loaded
+// Loader disappears when page loads
 window.addEventListener("load", () => {
   const loader = document.getElementById("loader");
-  loader.style.opacity = "0";
+  loader.style.opacity = 0;
   setTimeout(() => {
     loader.style.display = "none";
-  }, 500);
+  }, 600);
 });
 
-// Smooth scroll behavior for nav links
-document.querySelectorAll("nav a").forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-    const targetId = this.getAttribute("href");
-    document.querySelector(targetId).scrollIntoView({
-      behavior: "smooth",
+// Form Submission
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("consultForm");
+  const formMsg = document.getElementById("formMsg");
+
+  if (form) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      formMsg.textContent = "Thank you for your query. We'll get back to you shortly.";
+      form.reset();
+    });
+  }
+
+  // Smooth scroll for nav links
+  document.querySelectorAll("nav a[href^='#']").forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute("href"));
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
     });
   });
-});
-
-// Consultation form submission
-const form = document.getElementById("consultForm");
-const formMsg = document.getElementById("formMsg");
-
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
-  formMsg.textContent = "Thank you for reaching out! We’ll contact you soon.";
-  form.reset();
 });
