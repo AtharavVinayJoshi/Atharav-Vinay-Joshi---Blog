@@ -1,12 +1,12 @@
-window.addEventListener('load', () => {
-  const loader = document.getElementById('loader');
-  loader.style.opacity = 0;
-  setTimeout(() => loader.style.display = 'none', 500);
+// Page loader effect
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loader");
+  loader.style.display = "none";
 });
 
-// Form handling
-document.getElementById('consultForm').addEventListener('submit', function (e) {
+// Contact form submission
+document.getElementById("consultForm").addEventListener("submit", function(e) {
   e.preventDefault();
-  document.getElementById('formMsg').textContent = "Thank you! We'll get in touch soon.";
+  document.getElementById("formMsg").textContent = "Thank you for your message! We'll get back to you soon.";
   this.reset();
 });
