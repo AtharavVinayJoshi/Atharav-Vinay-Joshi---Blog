@@ -1,33 +1,26 @@
-// Loader disappears when page loads
+// Loader logic
 window.addEventListener("load", () => {
   const loader = document.getElementById("loader");
-  loader.style.opacity = 0;
   setTimeout(() => {
     loader.style.display = "none";
-  }, 600);
+  }, 3000);
 });
 
-// Form Submission
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("consultForm");
-  const formMsg = document.getElementById("formMsg");
-
-  if (form) {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      formMsg.textContent = "Thank you for your query. We'll get back to you shortly.";
-      form.reset();
-    });
-  }
-
-  // Smooth scroll for nav links
-  document.querySelectorAll("nav a[href^='#']").forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute("href"));
-      if (target) {
-        target.scrollIntoView({ behavior: "smooth" });
-      }
-    });
+// Smooth scroll (optional for nav links)
+document.querySelectorAll("nav a").forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const section = document.querySelector(this.getAttribute("href"));
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
   });
+});
+
+// Contact form message
+document.getElementById("consultForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  document.getElementById("formMsg").textContent =
+    "Thank you for reaching out. We'll get back to you soon!";
+  this.reset();
 });
