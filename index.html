@@ -1,87 +1,96 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dr. Vinay's Consultancy</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Loader -->
+  <!-- Logo Loader -->
   <div id="loader">
-    <img src="images/logo.png" alt="Logo" class="loader-logo">
+    <img src="logo.png" alt="Logo" class="loader-logo" />
   </div>
 
-  <!-- Navigation -->
-  <nav id="navbar">
-    <div class="nav-content">
-      <img src="images/logo.png" alt="Logo" class="nav-logo">
-      <ul>
-        <li><a href="#about">About</a></li>
+  <!-- Navbar -->
+  <nav>
+    <div class="nav-container">
+      <img src="logo.png" alt="Logo" class="nav-logo" />
+      <ul class="nav-links">
+        <li><a href="#about">About Us</a></li>
         <li><a href="#founders">Founders</a></li>
         <li><a href="#contact">Consultation</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Hero Header -->
-  <header class="hero">
-    <div class="container hero-content">
-      <div class="hero-text">
-        <h1>Dr. Vinay's Consultancy</h1>
-        <p class="tagline">Illuminating Lives Through the Science of Stars</p>
-        <p class="mission">
-          We are committed to guiding individuals on their journey through life's uncertainties using the time-honored wisdom of astrology. At Dr. Vinay's Consultancy, our vision is to make spiritual knowledge accessible, practical, and deeply personal—helping you discover clarity, confidence, and cosmic alignment.
-        </p>
-        <a href="#contact" class="hero-button">Book Your Consultation</a>
-      </div>
-    </div>
+  <!-- Header -->
+  <header>
+    <h1>Welcome to Dr. Vinay's Consultancy</h1>
+    <p>Your trusted partner in astrological and wellness guidance.</p>
   </header>
 
-  <!-- About -->
-  <section class="about" id="about">
+  <!-- About Us -->
+  <section id="about" class="about elegant-card">
     <h2>About Us</h2>
     <p>
-      Dr. Vinay's Consultancy was founded with a deep-rooted purpose: to guide individuals through life's challenges by tapping into the universal wisdom of Vedic astrology. We offer personalized readings, spiritual consultations, and life advice grounded in ancient principles, updated for the modern world. Whether you're facing personal, professional, or spiritual dilemmas, we are here to support your journey with clarity and compassion.
+      At Dr. Vinay's Consultancy, we believe in the healing power of ancient Vedic wisdom
+      blended with personalized wellness. Our astrological consultations are designed
+      to guide you through life's challenges with clarity and confidence. Backed by
+      years of experience and thousands of satisfied clients, we bring insight, purpose,
+      and peace to your journey.
+    </p>
+    <p>
+      Our services include personalized astrology reports, kundali matching, health and
+      career guidance, and spiritual mentorship, all tailored to your unique energy.
     </p>
   </section>
 
   <!-- Founders -->
-  <section class="founders" id="founders">
+  <section id="founders" class="founders elegant-card">
+    <h2>Our Founders</h2>
+
     <div class="founder">
-      <img src="images/atharav.jpg.png" alt="Atharav Vinay Joshi" />
-      <h3>Atharav Vinay Joshi</h3>
-      <p>Founder & Visionary</p>
-      <p>
-        “With a passion for astrology and a heart set on serving people, I started this consultancy to make cosmic wisdom approachable and helpful. Our mission is to provide insightful, actionable guidance through astrological methods.”
-      </p>
+      <img src="atharav.jpg" alt="Atharav Vinay Joshi" />
+      <div>
+        <h3>Atharav Vinay Joshi – Founder & Visionary</h3>
+        <p>
+          Atharav Vinay Joshi, the visionary founder, brings technological innovation
+          into the world of astrology. His modern outlook combined with deep spiritual
+          understanding has led to the creation of this platform that bridges tradition and modern needs.
+        </p>
+      </div>
     </div>
+
     <div class="founder">
-      <img src="images/drvinay.jpg.jpg" alt="Dr. Vinay S Joshi" />
-      <h3>Dr. Vinay S Joshi</h3>
-      <p>Co-Founder & Consultant</p>
-      <p>
-        “Astrology isn’t just a tool for prediction—it's a light that helps us understand ourselves and the world around us. I believe in delivering knowledge that empowers and uplifts.”
-      </p>
+      <img src="drvinay.jpg" alt="Dr. Vinay S Joshi" />
+      <div>
+        <h3>Dr. Vinay S Joshi – Co-Founder & Consultant</h3>
+        <p>
+          Dr. Vinay S Joshi, a respected name in holistic and emotional wellness,
+          co-founded this platform to serve humanity through astrological science.
+          With years of expertise, he has guided people from various walks of life
+          toward peace, purpose, and prosperity.
+        </p>
+      </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section class="contact" id="contact">
-    <h2>Book a Consultation</h2>
+  <section id="contact" class="contact elegant-card">
+    <h2>Book Your Consultation</h2>
     <form id="consultForm">
       <input type="text" placeholder="Your Name" required />
       <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Query" required></textarea>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
       <button type="submit">Submit</button>
+      <p id="formMsg"></p>
     </form>
-    <p id="formMsg"></p>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Dr. Vinay's Consultancy. All Rights Reserved.</p>
+    <p>&copy; 2025 Dr. Vinay's Consultancy. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
