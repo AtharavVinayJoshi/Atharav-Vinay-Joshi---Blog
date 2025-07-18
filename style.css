@@ -62,32 +62,41 @@ nav {
   top: 0;
   z-index: 1000;
   animation: slideDown 1s ease-in-out;
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
 .nav-logo {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
 }
 
-nav ul {
-  list-style: none;
+.nav-links {
   display: flex;
   gap: 2rem;
+  justify-content: center;
+  flex-grow: 1;
 }
 
-nav a {
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
   text-decoration: none;
   color: white;
   font-weight: bold;
   transition: color 0.3s;
 }
 
-nav a:hover {
+.nav-links a:hover {
   color: #e0ffe0;
 }
 
@@ -111,21 +120,25 @@ header {
 }
 
 header h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin-bottom: 1rem;
 }
 
 header p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
-/* Sections */
-section {
-  padding: 3rem 1rem;
+/* Elegant Section Card */
+.elegant-card {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 3rem auto;
   max-width: 1000px;
-  margin: auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
 }
 
+/* Section Headers */
 section h2 {
   text-align: center;
   margin-bottom: 2rem;
@@ -133,24 +146,20 @@ section h2 {
   color: #4caf50;
 }
 
-.about, .founders, .contact {
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  padding: 2rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+/* About Text */
+.about p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  text-align: justify;
 }
 
 /* Founders */
-.founders {
+.founders .founder {
   display: flex;
-  flex-direction: column;
+  align-items: flex-start;
   gap: 2rem;
-}
-
-.founder {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .founder img {
@@ -163,9 +172,14 @@ section h2 {
 }
 
 .founder h3 {
-  margin: 0;
+  margin-bottom: 0.5rem;
   font-size: 1.5rem;
   color: #333;
+}
+
+.founder p {
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 /* Contact Form */
@@ -196,6 +210,11 @@ section h2 {
 
 .contact button:hover {
   background-color: #7b1fa2;
+}
+
+#formMsg {
+  color: green;
+  margin-top: 10px;
 }
 
 /* Footer */
