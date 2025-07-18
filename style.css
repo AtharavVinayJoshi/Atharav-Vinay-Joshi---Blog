@@ -1,4 +1,4 @@
-/* Reset */
+/* Reset & Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -7,188 +7,171 @@
 }
 
 body {
-  background: #ffffff;
-  color: #333;
+  background: #f8f9fa;
+  color: #222;
   line-height: 1.6;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
 }
 
 /* Loader */
 #loader {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   background: #fff;
   display: flex;
-  align-items: center;
   justify-content: center;
-  z-index: 1000;
+  align-items: center;
+  z-index: 9999;
 }
 
 .loader-logo {
-  width: 120px;
-  animation: pulse 1.5s ease-in-out infinite;
+  width: 150px;
+  animation: fadeInScale 2s ease-in-out forwards;
 }
 
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 0.8;
-  }
-  50% {
-    transform: scale(1.1);
-    opacity: 1;
-  }
+@keyframes fadeInScale {
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
 }
 
 /* Navbar */
 #navbar {
-  background: #4a0c66;
-  padding: 15px 30px;
+  background: #4B0082;
+  color: white;
+  padding: 15px 0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 1000;
 }
 
-.nav-content {
+.nav-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
+  gap: 60px;
 }
 
 .nav-logo {
+  position: absolute;
+  left: 30px;
   width: 50px;
 }
 
 .nav-links {
   display: flex;
-  gap: 30px;
-}
-
-.nav-links li {
+  gap: 40px;
   list-style: none;
 }
 
 .nav-links a {
-  color: #fff;
-  font-weight: 500;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
   transition: color 0.3s;
 }
 
 .nav-links a:hover {
-  color: #a5f0c5;
+  color: #8affc1;
 }
 
-/* Hero */
-.hero {
-  padding: 60px 20px;
+/* Header */
+header {
   text-align: center;
-  background: linear-gradient(to right, #a5f0c5, #cba7e2);
-  color: #222;
-}
-
-.hero h1 {
-  font-size: 2.8em;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 1.2em;
-}
-
-/* Section Styling */
-section {
+  background: linear-gradient(to right, #a6ffcb, #d9f5ff);
   padding: 60px 20px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #4B0082;
+}
+
+/* Sections */
+section {
+  padding: 40px 20px;
   max-width: 1000px;
   margin: auto;
 }
 
-/* About Us */
+section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #4B0082;
+}
+
+/* About */
 .about p {
-  margin-bottom: 15px;
-  font-size: 1.05em;
-  color: #444;
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+  text-align: justify;
 }
 
 /* Founders */
-.founders {
-  background: #f8f8f8;
+.founder-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.founder {
   text-align: center;
 }
 
-.founder-card {
-  margin: 40px auto;
-  max-width: 800px;
-  text-align: left;
-}
-
-.founder-card img {
-  float: left;
-  width: 120px;
-  height: 120px;
+.founder img {
+  width: 160px;
+  height: 160px;
   object-fit: cover;
   border-radius: 50%;
-  margin-right: 20px;
+  margin-bottom: 15px;
+  border: 4px solid #8affc1;
 }
 
-.founder-card h3 {
-  margin-top: 0;
-  color: #4a0c66;
+.founder p {
+  margin: 5px auto;
+  font-size: 1rem;
+  max-width: 700px;
+  text-align: justify;
 }
 
-.founder-card:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Consultation */
+/* Contact */
 .contact form {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  max-width: 600px;
+  max-width: 500px;
   margin: auto;
 }
 
 .contact input,
 .contact textarea {
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1em;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  font-size: 1rem;
 }
 
 .contact button {
-  padding: 12px;
-  background: #4a0c66;
+  background: #4B0082;
   color: white;
+  padding: 10px;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
+  font-weight: bold;
   transition: background 0.3s;
 }
 
 .contact button:hover {
-  background: #5e1791;
-}
-
-#formMsg {
-  text-align: center;
-  margin-top: 15px;
-  color: green;
+  background: #6f42c1;
 }
 
 /* Footer */
 footer {
   text-align: center;
+  background: #4B0082;
+  color: white;
   padding: 20px;
-  background: #222;
-  color: #eee;
+  margin-top: 40px;
 }
