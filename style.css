@@ -28,7 +28,7 @@ p {
 }
 
 .navbar {
-  background-color: #e3e3f3;
+  background-color: #467c48;
   padding: 15px 20px;
   display: flex;
   justify-content: space-between;
@@ -50,10 +50,10 @@ p {
 }
 
 .nav-menu li a {
-  text-decoration: none;
-  color: #4c4c4c;
-  font-size: 18px;
-  font-weight: bold;
+    text-decoration: none;
+    color: blanchedalmond;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .founders .founder-card {
