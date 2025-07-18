@@ -1,12 +1,17 @@
-// Page loader effect
+// Hide loader after animation
 window.addEventListener("load", () => {
   const loader = document.getElementById("loader");
-  loader.style.display = "none";
+  setTimeout(() => {
+    loader.style.display = "none";
+  }, 2000); // duration matches animation
 });
 
-// Contact form submission
-document.getElementById("consultForm").addEventListener("submit", function(e) {
+// Form submission (basic simulation)
+const form = document.getElementById("consultForm");
+const formMsg = document.getElementById("formMsg");
+
+form.addEventListener("submit", (e) => {
   e.preventDefault();
-  document.getElementById("formMsg").textContent = "Thank you for your message! We'll get back to you soon.";
-  this.reset();
+  formMsg.textContent = "Thank you! We will get back to you shortly.";
+  form.reset();
 });
