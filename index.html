@@ -3,87 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dr. Vinay's Consultancy - Rejoice Life</title>
+  <title>Atharav Vinay Joshi - Blog</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="header">
+    <div class="logo">Atharav V. Joshi</div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#blogs">Blogs</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="toggleDark">🌙</button></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- Logo Preloader -->
-  <div id="preloader">
-    <img src="images/logo.png" alt="Logo" id="loader-logo" />
-  </div>
+  <section id="home" class="hero">
+    <h1 class="fade-in">Hi, I'm <span class="highlight">Atharav Vinay Joshi</span></h1>
+    <p class="fade-in delay">A passionate tech enthusiast & lifelong learner.</p>
+  </section>
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="navbar-logo">
-      <img src="images/logo.png" alt="Logo">
-    </div>
-    <ul class="nav-menu">
-      <li><a href="#about">About</a></li>
-      <li><a href="#founders">Founders</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- About Section -->
   <section id="about" class="section">
-    <h1>About Us</h1>
-    <p>
-      At Dr. Vinay S. Consultancy, our mission is to empower individuals and organizations
-      with thoughtful, expert-driven guidance that leads to real transformation.
-      Founded by Atharav Vinay Joshi and co-founded by Dr. Vinay S. Joshi, our consultancy
-      blends youthful vision with decades of professional experience. We believe that
-      meaningful progress begins with clarity — whether you're navigating academic,
-      career, personal, or strategic decisions. Every client is treated with integrity,
-      empathy, and a deep respect for their journey.
-    </p>
+    <h2>About Me</h2>
+    <p>I am a recent B.Tech graduate, published researcher, and a developer with experience in Python, C++, and web technologies. Currently seeking exciting opportunities in software development.</p>
   </section>
 
-  <!-- Founders Section -->
-  <section id="founders" class="section founders">
-    <h1>Our Founders</h1>
-
-    <div class="founder-card">
-      <img src="images/atharav.jpg.png" alt="Atharav Vinay Joshi">
-      <div class="founder-text">
-        <h2>Atharav Vinay Joshi - Founder & Visionary</h2>
-        <p>
-          Dr. Vinay S. Consultancy was founded with a vision to bring meaningful,
-          personalized guidance to those seeking clarity in life, career, and relationships.
-          I created this platform to expand and modernize the legacy of Dr. Vinay S. Joshi —
-          my father, mentor, and now partner — whose expertise in astrology, psychology, and
-          corporate strategy has transformed countless lives. Together, we blend traditional
-          wisdom with real-world insight to guide people toward lasting success and inner balance.
-        </p>
+  <section id="blogs" class="section">
+    <h2>Recent Blog Posts</h2>
+    <div class="blog-container">
+      <div class="blog-card">
+        <h3>🚀 My Journey into Tech</h3>
+        <p>How I transitioned from a student to a published researcher & aspiring developer.</p>
+        <a href="#">Read More</a>
       </div>
-    </div>
-
-    <div class="founder-card reverse">
-      <img src="images/drvinay.jpg.jpg" alt="Dr. Vinay S. Joshi">
-      <div class="founder-text">
-        <h2>Dr. Vinay S. Joshi - Co-Founder & Consultant</h2>
-        <p>
-          With over 30 years of experience in the corporate world, combined with my lifelong
-          practice in astrology and psychology, I’ve come to understand the deep connections
-          between mindset, timing, and decision-making. Atharav’s foresight and passion gave
-          my work a new platform — turning a personal mission into a dynamic consultancy. His
-          vision helped shape our approach: honest, insightful, and deeply human. Today, we
-          stand united in helping others find clarity, direction, and confidence.
-        </p>
+      <div class="blog-card">
+        <h3>💻 Mastering Web Development Basics</h3>
+        <p>A practical guide to understanding HTML, CSS, and JavaScript for beginners.</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="blog-card">
+        <h3>🎯 Planning a Successful Tech Career</h3>
+        <p>Steps to build a strong foundation in tech, stand out, and grow in the industry.</p>
+        <a href="#">Read More</a>
       </div>
     </div>
   </section>
 
-  <!-- Contact Us Section -->
   <section id="contact" class="section">
-    <h1>Contact Us</h1>
-    <form class="contact-form">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
       <input type="text" placeholder="Your Name" required />
       <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
     </form>
   </section>
+
+  <button id="scrollTopBtn">⬆️</button>
+
+  <footer class="footer">
+    <p>&copy; 2025 Atharav Vinay Joshi. All Rights Reserved.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
