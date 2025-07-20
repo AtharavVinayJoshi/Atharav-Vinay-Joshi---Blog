@@ -9,16 +9,14 @@ toggleDark.addEventListener("click", () => {
 const scrollTopBtn = document.getElementById("scrollTopBtn");
 
 window.onscroll = () => {
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
   if (document.documentElement.scrollTop > 300) {
-    scrollTopBtn.style.display = "block";
+    scrollTopBtn.classList.add("show");
   } else {
-    scrollTopBtn.style.display = "none";
+    scrollTopBtn.classList.remove("show");
   }
 };
 
-scrollTopBtn.onclick = () => {
-  document.documentElement.scrollTop = 0;
-};
 
 // Contact form alert
 document.getElementById("contactForm").addEventListener("submit", function (e) {
